@@ -1,0 +1,15 @@
+x64/
+Debug/
+Release/
+*.exe
+*.dll
+*.pdb
+*.lib
+
+.vs/
+*.user
+
+MD_Bridge_SDK/bin/
+
+__pycache__/
+*.pyc
