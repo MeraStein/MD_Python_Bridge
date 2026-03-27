@@ -11,6 +11,7 @@ extern "C" {
 #endif
 
     MD_API void RunPythonScript(const char* scriptPath);
+    MD_API void runPythonInProjectsByWord(const char* word);
 
 #ifdef __cplusplus
 }

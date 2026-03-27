@@ -8,6 +8,6 @@
 #include <conio.h>
 #include <ctype.h> 
 
-__declspec(dllimport) void RunPythonScript(const char* scriptPath);
+__declspec(dllimport) void runPythonInProjectsByWord(const char* scriptPath);
 
 #endif

@@ -2,14 +2,15 @@
 
 int main() {
     char codeWord[50];
-    char scriptPath[260];
+    /*char scriptPath[260];*/
     int isExit = 0;
     char tempChar;
 
     while (!isExit) {
         system("cls");
         memset(codeWord, 0, sizeof(codeWord));
-        memset(scriptPath, 0, sizeof(scriptPath));
+       /* memset(scriptPath, 0, sizeof(scriptPath));*/
+        fflush(stdin);
 
         printf("\n========================================\n");
         printf("   MagicData Python Runner - Console    \n");
@@ -31,17 +32,19 @@ int main() {
             break;
         }
 
-        sprintf_s(scriptPath, sizeof(scriptPath), ".\\python_projects\\python_%s\\main.py", codeWord);
+        runPythonInProjectsByWord(codeWord);
+        /*sprintf_s(scriptPath, sizeof(scriptPath), "python_projects\\python_%s\\main.py", codeWord);*/
 
         printf("\n>>> STARTING EXECUTION: %s\n", codeWord);
         printf("----------------------------------------\n");
 
-        RunPythonScript(scriptPath);
+        runPythonInProjectsByWord(codeWord);
+        /*RunPythonScript(scriptPath);*/
 
         printf("----------------------------------------\n");
         printf(">>> EXECUTION FINISHED.\n");
         printf("\nPress any key to return to menu...");
-
+        fflush(stdin);
         tempChar = _getch();
     }
 
